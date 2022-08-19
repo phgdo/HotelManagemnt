@@ -135,6 +135,7 @@ void employeesManage(vector<Room> rooms, vector<Employee> employees, vector<Cust
     cout << "Quay lai." << endl;
     cout << "Nhap lua chon cua ban: ";
     cin >> choice;
+    system("cls");
     switch (choice)
     {
     case 1:
@@ -147,16 +148,21 @@ void employeesManage(vector<Room> rooms, vector<Employee> employees, vector<Cust
         cout << "0. Quay lai." << endl;
         cout << "Nhap lua chon cua ban: ";
         cin >> choice2;
+        system("cls");
         switch (choice2)
         {
         case 1:
         {
+            system("cls");
+
             searchEmployeesWithID(rooms, employees, customers);
             break;
         }
 
         case 2:
         {
+            system("cls");
+
             searchCustomersWithName(rooms, customers);
             break;
         }
@@ -164,11 +170,13 @@ void employeesManage(vector<Room> rooms, vector<Employee> employees, vector<Cust
         case 3:
         {
             searchEmployeesWithPhoneNumber(rooms, employees, customers);
+            system("cls");
             break;
         }
 
         default:
         {
+            system("cls");
             employeesManage(rooms, employees, customers);
             break;
         }
@@ -183,6 +191,7 @@ void employeesManage(vector<Room> rooms, vector<Employee> employees, vector<Cust
         cout << "Ca 3: 4 PM - 0AM." << endl;
         cout << "Nhap ca lam viec: ";
         cin >> ca;
+        system("cls");
         while (ca != 1 || ca != 2 || ca != 3)
         {
             cout << "Ca lam viec khong dung. Hay thu lai: ";
@@ -191,6 +200,7 @@ void employeesManage(vector<Room> rooms, vector<Employee> employees, vector<Cust
         showEmployeesByShifts(employees, ca);
         cout << "\n0. Quay lai.";
         cin >> ca;
+        system("cls");
         if (ca == 0)
         {
             employeesManage(rooms, employees, customers);
@@ -218,6 +228,7 @@ void employeesManage(vector<Room> rooms, vector<Employee> employees, vector<Cust
         }
         cout << "\n0. Quay lai.";
         cin >> ca;
+        system("cls");
         if (ca == 0)
         {
             employeesManage(rooms, employees, customers);
@@ -227,12 +238,16 @@ void employeesManage(vector<Room> rooms, vector<Employee> employees, vector<Cust
             cout << "\n0. Quay lai.";
             cin >> ca;
         }
+        system("cls");
         break;
     }
 
     default:
+    {
+        system("cls");
         MainMenu(rooms, employees, customers);
         break;
+    }
     }
 }
 
@@ -398,22 +413,25 @@ void roomsManage(vector<Room> rooms, vector<Customer> customers)
     cout << "0. Quay lai." << endl;
     cout << "Nhap lua chon cua ban: ";
     cin >> choice;
-
+    system("cls");
     switch (choice)
     {
     case 1:
     {
+        system("cls");
         checkin(rooms, customers);
         break;
     }
 
     case 2:
     {
+        system("cls");
         checkout(rooms, customers);
         break;
     }
     case 3:
     {
+        system("cls");
         showEmptyRooms(rooms);
         break;
     }
@@ -432,33 +450,41 @@ void roomsManage(vector<Room> rooms, vector<Customer> customers)
         {
         case 1:
         {
+            system("cls");
             searchCustomersWithName(rooms, customers);
             break;
         }
         case 2:
         {
+            system("cls");
             searchCustomersWithID(rooms, customers);
             break;
         }
         case 3:
         {
+            system("cls");
             searchCustomersWithPhoneNumber(rooms, customers);
             break;
         }
         case 4:
         {
+            system("cls");
             searchCustomerWithRoomID(rooms, customers);
             break;
         }
         default:
         {
+            system("cls");
             roomsManage(rooms, customers);
             break;
         }
         }
 
     default:
+    {
+        system("cls");
         break;
+    }
     }
         fflush(stdin);
     }
@@ -840,13 +866,14 @@ void setting(vector<Room> rooms, vector<Employee> employees, vector<Customer> cu
     cout << "0. Quay lai." << endl;
     cout << "Nhap lua chon cua ban: ";
     cin >> choice;
+    system("cls");
     switch (choice)
     {
     case 1:
     {
         addroom(rooms);
-        cout << "Tiep tuc them phong?(Y/N): ";
         char lc;
+        cout << "Tiep tuc them phong?(Y/N): ";
         cin >> lc;
         while (lc == 'y' || lc == 'Y')
         {
@@ -859,6 +886,7 @@ void setting(vector<Room> rooms, vector<Employee> employees, vector<Customer> cu
                 break;
             }
         }
+        system("cls");
         break;
     }
 
@@ -879,6 +907,7 @@ void setting(vector<Room> rooms, vector<Employee> employees, vector<Customer> cu
                 break;
             }
         }
+        system("cls");
         break;
     }
 
@@ -899,6 +928,7 @@ void setting(vector<Room> rooms, vector<Employee> employees, vector<Customer> cu
                 break;
             }
         }
+        system("cls");
         break;
     }
 
@@ -919,17 +949,14 @@ void setting(vector<Room> rooms, vector<Employee> employees, vector<Customer> cu
                 break;
             }
         }
-        break;
-    }
-    case 0:
-    {
-        MainMenu(rooms, employees, customers);
+        system("cls");
         break;
     }
 
     default:
     {
         setting(rooms, employees, customers);
+        system("cls");
         break;
     }
     }
